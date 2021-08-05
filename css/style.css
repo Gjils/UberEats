@@ -29,8 +29,6 @@ header .container > div {
   background-color: white;
   border: 0px solid white;
   border-radius: 2px;
-  width: 150px;
-  height: 40px;
   transition-duration: 0.4s;
 }
 .logo button:active {
@@ -53,10 +51,10 @@ header .container > div {
 }
 .logIn button:hover {
   background-color: #E0E0E0;
-  border: 1px solid gray;
+  border: 1px solid ;
 }
 .logIn button:active {
-  background-color: white;
+  background-color: #ccc;
   border: 1px solid black;
 }
 /*Настройки кнопки "Корзина"*/
@@ -80,4 +78,40 @@ header .container > div {
 }
 .basket button:active {
   background-color: #E0E0E0;
+}
+
+/*Настройки панели поиска*/
+.searchPanel {
+  margin-top: 30px;
+}
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 10px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #979797;
+}
+.input_field {
+  border: 0;
+  padding: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 1px solid #979797;
+  font: inherit;
+  font-size: 16px;
+  line-height: 30px;
+}
+.input_label {
+  color: #979797;
+  position: absolute;
+  top: 20px;
+}
+.input_field:focus, .input_field:valid {
+  outline: 0;
+  border-bottom: 1px solid #979797;
+}
+.input_field:focus + .input_label, .input_field:valid + .input_label {
+  display: none;
 }
